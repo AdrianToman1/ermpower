@@ -11,6 +11,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -42,11 +43,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\NOrderStatistics.cs" />
+    <Compile Include="Extensions\SimpleMedian.cs" />
+    <Compile Include="Processors\IProcessorRecordReader.cs" />
+    <Compile Include="Files\RecordReader.cs" />
+    <Compile Include="Files\LPRecordReader.cs" />
+    <Compile Include="Files\TOURecordReader.cs" />
+    <Compile Include="Processors\AbnormalValueProcessor.cs" />
+    <Compile Include="Processors\IProcessorRecord.cs" />
+    <Compile Include="Files\TOURecord.cs" />
+    <Compile Include="Files\LPRecord.cs" />
+    <Compile Include="Processors\MedianProcessor.cs" />
+    <Compile Include="Processors\Processor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Files\EmptyFile.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
